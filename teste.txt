@@ -1,0 +1,4 @@
+SELECT i.fname, i.lname, c.city, min(i.birth_date) as older_ind 
+FROM  individual i, customer c
+WHERE i.cust_id = c.cust_id
+GROUP BY c.city, i.fname, i.lname;
